@@ -138,7 +138,7 @@ export interface Card {
 	category: 'Pokemon' | 'Trainer' | 'Energy'
 
 	/**
-	 * Card Variants (Override Set Variants)
+	 * Card Variants
 	 */
 	variants?: variants
 
