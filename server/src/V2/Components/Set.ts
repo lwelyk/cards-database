@@ -42,13 +42,6 @@ const sets = {
 	'zh-cn': zhcn,
 } as const
 
-interface variants {
-	normal?: boolean;
-	reverse?: boolean;
-	holo?: boolean;
-	firstEdition?: boolean;
-}
-
 type LocalSet = {serie: () => Serie, cards: () => Array<Card>} & Omit<SDKSet, 'serie' | 'cards'>
 
 export default class Set implements LocalSet {
@@ -66,7 +59,6 @@ export default class Set implements LocalSet {
 	}
 
 	tcgOnline?: string | undefined
-	variants?: variants | undefined
 	releaseDate!: string
 	legal!: { standard: boolean; expanded: boolean }
 	cardCount!: { total: number; official: number; normal: number; reverse: number; holo: number; firstEd?: number | undefined }
